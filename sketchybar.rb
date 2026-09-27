@@ -21,6 +21,10 @@ class Sketchybar < Formula
   def install
     clear_env
     (var/"log/sketchybar").mkpath
+    # The Makefile's `all` target lists `clean` and `universal` as unordered
+    # prerequisites, so a parallel make can `rm -rf bin` while the architecture
+    # sub-makes are still compiling into it. Build serially to avoid the race.
+    ENV.deparallelize
     if MacOS.version < 11
       system "make", "x86"
     else
