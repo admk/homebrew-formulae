@@ -6,11 +6,11 @@
 class Borders < Formula
   env :std
   desc "A window border system for macOS"
-  homepage "https://github.com/FelixKratz/JankyBorders"
-  url "https://github.com/FelixKratz/JankyBorders/archive/refs/tags/v1.9.0.tar.gz"
-  sha256 "70b5bff531b67a082cc0108d88a8355ba5e7c8326285533143c185efdf21769f"
+  homepage "https://github.com/admk/JankyBorders"
+  url "https://github.com/admk/JankyBorders/archive/refs/tags/v1.9.0-admk.1.tar.gz"
+  sha256 "d6fd1df4d388d60bc540b9ad9e2a8fec7f00a6bc7aba647c6236d39ebd4edbaa"
   license "GPL-3.0-only"
-  head "https://github.com/FelixKratz/JankyBorders.git", branch: "main"
+  head "https://github.com/admk/JankyBorders.git", branch: "mission-control-transform-fix"
 
   def clear_env
     ENV.delete("CFLAGS")
